@@ -23,18 +23,18 @@ function mapToSquare(arr)
 }
 
 
-function reduceToTotal(arr)
+function reduceToTotal(arr,x)
 {
 return arr.reduce((result, item)  => result + item);
 
 }
-console.log(reduceToTotal([1,2]))
+
 function reduceToTotal(arr,x)
 {
  return arr.reduce((result, item)  => result + item,x);
 
 }
-console.log(reduceToTotal([1,2],100))
+
 
 
 function reduceToAllTrue(arr)
