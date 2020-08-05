@@ -22,21 +22,35 @@ function mapToSquare(arr)
   return arr.map(n=>n *n);
 }
 
+
 function reduceToTotal(arr)
 {
-const sum= arr.reduce(function (result, item) {  return result + item;});
-  return sum;
+return arr.reduce((result, item)  => result + item);
+
 }
+console.log(reduceToTotal([1,2]))
 function reduceToTotal(arr,x)
 {
- const sum= arr.reduce(function (result, item) {  return result + item;},x);
-  return sum ;
+ return arr.reduce((result, item)  => result + item,x);
+
+}
+console.log(reduceToTotal([1,2],100))
+
+
+function reduceToAllTrue(arr)
+{
+  return arr.reduce((items, value) => items && Boolean(value), true);
+
 }
 
-
-
-function reduceToAnyTrue(arr,search)
+function reduceToAnyTrue(arr)
 {
-  return arr.reduce((items, value) => items && Boolean(search(value)), true);
+  return arr.reduce((items, value) => items || Boolean(value), true);
+
+}
+
+function reduceToAnyTrue(arr)
+{
+  return arr.reduce((items, value) => items || Boolean(value),false);
 
 }
